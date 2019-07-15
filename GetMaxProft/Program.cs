@@ -28,8 +28,11 @@ namespace GetMaxProft
             int minPrice = stockPrices[0];
             int maxProfit = stockPrices[1] - stockPrices[0];
 
+            // Ensure minPrice is the lowest price we've seen so far
             for (int i = 1; i < stockPrices.Length; i++)
             {
+                // See what our profit would be if we bought at the
+                // min price and sold at the current price
                 int currentPrice = stockPrices[i];
                 int potentialProfit = currentPrice - minPrice;
 
